@@ -1,4 +1,4 @@
-MINIO_VOLUMES={% for host in vars['play_hosts'] %} http://{{hostvars[host]['ansible_default_ipv4']['address']}}/export{1...{{HOST_COUNT}}}{% endfor %}
+MINIO_VOLUMES={% for host in vars['play_hosts'] %} http://{{hostvars[host]['ansible_default_ipv4']['address']}}/export{% endfor %}
 
 MINIO_OPTS="--address :9199"
 
