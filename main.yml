@@ -36,7 +36,7 @@
 
     - name: copy minio client binary
       copy:
-        src: /tmp/minio
+        src: /tmp/mc
         dest: /usr/local/bin/mc
         mode: 777    
 
