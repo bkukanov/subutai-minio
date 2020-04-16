@@ -2,13 +2,9 @@
 
 - hosts: localhost
   tasks:
-    - name: Download minio server
+    - name: Download minio
       shell:
         cmd: wget --no-check-certificate -O /tmp/minio https://ipfs.subutai.io/ipfs/QmYeLqo4amxoYBuyF4kvaPvYbRkTXTHuekXUsVj6uwvcFc/minio
-
-    - name: Download minio client
-      shell:
-        cmd: wget --no-check-certificate -O /tmp/mc https://ipfs.subutai.io/ipfs/QmZZrqzCatefHhPaWR63FAzrq4EZXo5ostDSKevoCdFg7s/mc
 
 - hosts: all
   remote_user: root
@@ -28,16 +24,10 @@
         update_cache: true
         upgrade: true
 
-    - name: copy minio server binary
+    - name: copy minio binary
       copy:
         src: /tmp/minio
         dest: /usr/local/bin/minio
-        mode: 777    
-
-    - name: copy minio client binary
-      copy:
-        src: /tmp/mc
-        dest: /usr/local/bin/mc
         mode: 777    
 
     - name: copy minio service file
