@@ -60,17 +60,3 @@
         name: minio	
         state: started	
         enabled: yes
-        
-    - name: copy mc script
-      template:
-        src: mcclient.sh.j2
-        dest: /tmp/mcclient.sh
-        mode: 777
-
-    - name: Run a script
-      command: sh /tmp/mcclient.sh
-
-    - name: Remove script
-      file:
-        path: /tmp/mcclient.sh
-        state: absent
