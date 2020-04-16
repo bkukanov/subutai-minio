@@ -2,9 +2,13 @@
 
 - hosts: localhost
   tasks:
-    - name: Download minio
+    - name: Download minio server
       shell:
         cmd: wget --no-check-certificate -O /tmp/minio https://ipfs.subutai.io/ipfs/QmYeLqo4amxoYBuyF4kvaPvYbRkTXTHuekXUsVj6uwvcFc/minio
+
+    - name: Download minio client
+      shell:
+        cmd: wget --no-check-certificate -O /tmp/mc https://ipfs.subutai.io/ipfs/QmZZrqzCatefHhPaWR63FAzrq4EZXo5ostDSKevoCdFg7s/mc
 
 - hosts: all
   remote_user: root
@@ -24,10 +28,16 @@
         update_cache: true
         upgrade: true
 
-    - name: copy minio binary
+    - name: copy minio server binary
       copy:
         src: /tmp/minio
         dest: /usr/local/bin/minio
+        mode: 777    
+
+    - name: copy minio client binary
+      copy:
+        src: /tmp/minio
+        dest: /usr/local/bin/mc
         mode: 777    
 
     - name: copy minio service file
@@ -50,3 +60,17 @@
         name: minio	
         state: started	
         enabled: yes
+        
+    - name: copy mc script
+      template:
+        src: mcclient.sh.j2
+        dest: /tmp/mcclient.sh
+        mode: 777
+
+    - name: Run a script
+      command: sh /tmp/mcclient.sh
+
+    - name: Remove script
+      file:
+        path: /tmp/mcclient.sh
+        state: absent
