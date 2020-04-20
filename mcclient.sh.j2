@@ -1,5 +1,0 @@
-!#/bin/bash
-
-{% for host in vars['play_hosts'] %}
-mc config host add minio http://{{hostvars[host]['ansible_default_ipv4']['address']}}:9199 {{accessKey}} {{secretKey}}
-{% endfor %}
