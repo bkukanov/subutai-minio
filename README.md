@@ -33,7 +33,7 @@ Add bucket
 mc mb minio/mybucket
 ```
 
-### How to fix dies node: 
+### How to fix died node: 
 
 1) Fix corrupted disk
 2) Make sure that minio service started
