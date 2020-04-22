@@ -1,6 +1,19 @@
-# Subutai Blueprint to install MinIO in distributed mode
+# Subutai Minio Blueprint 
 
-MinIO is High Performance Object Storage released under Apache License v2.0. It is API compatible with Amazon S3 cloud storage service.
+**Subutai Minio Blueprint** to install MinIO in distributed mode.
+
+**How to enable https:**
+
+Add port mapping to all containers: external port is https **443** and internal port is **9199**, **ssl_backend** should be enabled,  provide **custom SSL certificate** in format with one file: 
+```
+-----BEGIN CERTIFICATE-----
+...
+-----END CERTIFICATE-----
+
+-----BEGIN PRIVATE KEY-----
+...
+-----END PRIVATE KEY-----
+```
 
 ### NOTE:
 ```
@@ -9,8 +22,8 @@ MinIO is High Performance Object Storage released under Apache License v2.0. It 
 3) Cluster will work while (nodes_count/2+1) is up 
 ```
 
+## Useful
 MinIO Client (mc) provides a modern alternative to UNIX commands like ls, cat, cp, mirror, diff, find etc.
-
 
 Add node to mc client 
 ```
