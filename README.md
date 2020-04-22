@@ -49,6 +49,8 @@ mc mb minio/mybucket
 ### How to fix died node: 
 
 1) Fix corrupted disk
+
 2) Make sure that minio service started
+
 3) Sync minio node with cmd: `mc admin heal -r minio`
 
