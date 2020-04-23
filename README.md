@@ -2,7 +2,7 @@
 
 **Subutai Minio Blueprint** to install MinIO in distributed mode.
 
-![wizard](https://ipfs.subutai.io/ipfs/QmejfobdBQBmsFXW7aX2GVQKWAK9zDzbL26b7LuBK9s62R/minioWizard.png)
+![wizard](https://ipfs.subutai.io/ipfs/QmSqVD4eu8HaZk1PXgwoMVNNX2B1yHJFvyrm4a5wjd3Cus/minioWizardMini.png)
 
 ## How to enable https
 
