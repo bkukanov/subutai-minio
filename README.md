@@ -2,7 +2,7 @@
 
 **Subutai Minio Blueprint** to install MinIO in distributed mode.
 
-@TODO - screenshots of wizard setup with annotated highlights
+![logo](https://github.com/absidish/subutai-minio/blob/master/docs/minioWizard.png)
 
 ## How to enable https
 
