@@ -8,8 +8,11 @@
 
 Add port mapping to all containers: external port is https **443** and internal port is **9199**, **ssl_backend** should be enabled,  provide a **custom SSL certificate** in the following single file format:
 
-@TODO -- describe this thoroughly: how do I make it, what do I use?
+### Example:
 
+![portmapping](https://github.com/absidish/subutai-minio/blob/master/docs/miniport.png)
+
+## SSL certificate format:
 ```
 -----BEGIN CERTIFICATE-----
 ...
