@@ -2,7 +2,7 @@
 
 **Subutai Minio Blueprint** to install MinIO in distributed mode.
 
-![logo](https://github.com/absidish/subutai-minio/blob/master/docs/minioWizard.png)
+![wizard](https://ipfs.subutai.io/ipfs/QmejfobdBQBmsFXW7aX2GVQKWAK9zDzbL26b7LuBK9s62R/minioWizard.png)
 
 ## How to enable https
 
@@ -10,7 +10,7 @@ Add port mapping to all containers: external port is https **443** and internal 
 
 ### Example:
 
-![portmapping](https://github.com/absidish/subutai-minio/blob/master/docs/miniport.png)
+![portmapping](https://ipfs.subutai.io/ipfs/QmcFuie2ru5KiUw2T14waRvkCgsjiCL92X9rtTpT15wDZg/miniport.png)
 
 ## SSL certificate format:
 ```
