@@ -6,7 +6,7 @@
   "containers": [
     {
       "hostname": "minio",
-      "template": "debian-stretch",
+      "template": "debian-buster",
       "peer-criteria": "gr1",
       "size": "CUSTOM",
       "ram": {
